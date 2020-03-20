@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      section {
+        width: 350px;
+      }
+      section.loading {
+        min-height: 200px;
+        background: url('/images/corona.gif') center center no-repeat;
+        position: relative;
+      }
+      section.loading:before {
+        width: 50px;
+        height: 20px;
+        position: absolute;
+        left: 50%;
+        margin-left: -25px;
+        top: 50px;
+        font-weight: bold;
+        content: 'Loading...'
+      }
+      section.loading div, section.loading h3 {
+        display: none;
+      }
+      h3 {
+        font-size: 20px;
+        margin: 0;
+        margin-left: 5px;
+        padding-bottom: 10px;
+        color: #333333;
+      }
+      div {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 5px;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+      div:last-child {
+        margin-bottom: 0;
+      }
+      i {
+        display: inline-block;
+        width: 25px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .confirmed {
+        background: #00d2ff; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #00d2ff, #928dab); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #00d2ff, #928dab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .recovered {
+        background: #4cb8c4; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4cb8c4, #3cd3ad); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .deaths {
+        background: #ed213a; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ed213a, #93291e); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ed213a, #93291e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .death-rate {
+        background: #fc5c7d; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #fc5c7d, #6a82fb); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #fc5c7d, #6a82fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/regular.min.css">
+    <link rel="stylesheet" type="text/css" href="css/solid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/brands.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/content.js"></script>
+  </head>
+  <body>
+    <section>
+      <h3 class="countryInfo"></h3>
+      <div class="confirmed"><i class="fa fa-biohazard"></i>Total Confirmed Cases: <span id="confirmed"/></div>
+      <div class="confirmed"><i class="fa fa-biohazard"></i>Today Confirmed Cases: <span id="confirmedtoday"/></div>
+      <div class="recovered"><i class="fa fa-heartbeat"></i>Recovered Cases: <span id="recovered"/></div>
+      <div class="deaths"><i class="fa fa-skull"></i>Total Death Count: <span id="deaths"></span></div>
+      <div class="deaths"><i class="fa fa-skull"></i>Today Death Count: <span id="deathstoday"/></div>
+      <div class="death-rate"><i class="fa fa-percent"></i>Death Rate: <span id="deathrate"></span></div>
+    </section>
+  </body>
+</html>

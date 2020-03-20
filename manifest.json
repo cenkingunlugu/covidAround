@@ -1,0 +1,49 @@
+{
+    "name": "Get covid info in your country",
+    "version": "0.0.0.3",
+    "description": "Get covid status in your country with one touch!",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [],
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": [
+            "js/jquery.min.js",
+            "js/content.js"
+          ]
+        }
+    ],
+    "web_accessible_resources": [
+        "fonts/fa-brands-400.eot",
+        "fonts/fa-brands-400.svg",
+        "fonts/fa-brands-400.ttf",
+        "fonts/fa-brands-400.woff",
+        "fonts/fa-brands-400.woff2",
+        "fonts/fa-regular-400.eot",
+        "fonts/fa-regular-400.svg",
+        "fonts/fa-regular-400.ttf",
+        "fonts/fa-regular-400.woff",
+        "fonts/fa-regular-400.woff2",   
+        "fonts/fa-solid-900.eot",
+        "fonts/fa-solid-900.svg",
+        "fonts/fa-solid-900.ttf",
+        "fonts/fa-solid-900.woff",
+        "fonts/fa-solid-900.woff2",
+        "css/brands.min.css",
+        "css/regular.min.css",
+        "css/solid.min.css",
+        "css/fontawesome.min.css",
+        "images/corona.gif"
+    ],
+    "icons": {
+        "16": "images/bacteria_16.png",
+        "32": "images/bacteria_32.png",
+        "48": "images/bacteria_48.png",
+        "128": "images/bacteria_128.png"
+      },
+    "manifest_version": 2
+  }
