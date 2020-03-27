@@ -2,15 +2,15 @@
 <html>
   <head>
     <style>
-      section {
+      .covid-around section {
         width: 350px;
       }
-      section.loading {
+      .covid-around section.loading {
         min-height: 200px;
         background: url('/images/corona.gif') center center no-repeat;
         position: relative;
       }
-      section.loading:before {
+      .covid-around section.loading:before {
         width: 50px;
         height: 20px;
         position: absolute;
@@ -20,48 +20,48 @@
         font-weight: bold;
         content: 'Loading...'
       }
-      section.loading div, section.loading h3 {
+      .covid-around section.loading div, section.loading h3 {
         display: none;
       }
-      h3 {
+      .covid-around h3 {
         font-size: 20px;
         margin: 0;
         margin-left: 5px;
         padding-bottom: 10px;
         color: #333333;
       }
-      div {
+      .covid-around div {
         font-size: 16px;
         line-height: 20px;
         padding: 5px;
         margin-bottom: 5px;
         color: #fff;
       }
-      div:last-child {
+      .covid-around div:last-child {
         margin-bottom: 0;
       }
-      i {
+      .covid-around i {
         display: inline-block;
         width: 25px;
         margin-right: 10px;
         text-align: center;
       }
-      .confirmed {
+      .covid-around .confirmed {
         background: #00d2ff; /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #00d2ff, #928dab); /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #00d2ff, #928dab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
-      .recovered {
+      .covid-around .recovered {
         background: #4cb8c4; /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #4cb8c4, #3cd3ad); /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #4cb8c4, #3cd3ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
-      .deaths {
+      .covid-around .deaths {
         background: #ed213a; /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #ed213a, #93291e); /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #ed213a, #93291e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
-      .death-rate {
+      .covid-around .death-rate {
         background: #fc5c7d; /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #fc5c7d, #6a82fb); /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #fc5c7d, #6a82fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -74,7 +74,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/content.js"></script>
   </head>
-  <body>
+  <body class="covid-around">
     <section>
       <h3 class="countryInfo"></h3>
       <div class="confirmed"><i class="fa fa-biohazard"></i>Total Confirmed Cases: <span id="confirmed"/></div>
