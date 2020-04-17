@@ -6,7 +6,7 @@ var formatNr = input => {
 $(document).ready(() => {
     $('.covid-around section').addClass('loading');
     $.getJSON({url: "http://ip-api.com/json"}).done( ipInfo => {
-        $.ajax({url: `https://corona.lmao.ninja/countries/v2/${ipInfo.country.toLowerCase()}?strict=true`}).done(
+        $.ajax({url: `https://corona.lmao.ninja/v2/countries/${ipInfo.country.toLowerCase()}?strict=true`}).done(
             data => {                
                 if (data) {
                     $(".covid-around .countryInfo").text(`Corona cases in ${ipInfo.country}`);
