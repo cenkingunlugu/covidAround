@@ -1,6 +1,6 @@
 {
     "name": "Get covid info in your country",
-    "version": "0.0.0.5",
+    "version": "0.0.0.6",
     "description": "Get covid status in your country with one touch!",
     "browser_action": {
         "default_popup": "popup.html"
